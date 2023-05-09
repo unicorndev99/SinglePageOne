@@ -18,12 +18,14 @@
 }
 
 .text1 {
+    font-weight: normal;
     color: #284D6D;
     font-size: 18px;
     line-height: 30px;
 }
 
 .text2 {
+    font-weight: normal;
     font-size: 14px;
     color: #565E6A;
 }
@@ -35,11 +37,13 @@
 }
 
 .cardPosition {
+    font-weight: normal;
     font-size: 16px;
     color: #284D6D;
 }
 
 .list {
+    font-weight: normal;
     font-size: 16px;
     color: #FE5F5F;
 }
@@ -49,12 +53,13 @@
 }
 
 .footerText {
+    font-weight: normal;
     font-size: 16px;
     color: #EFF0F7;
 }
 
 /*-----------------------*/
-@media (max-width: 376px ) {
+@media (max-width: 500px ) {
     .headline2 {
         font-size: 20px;
         line-height: 24px;
