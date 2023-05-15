@@ -5,19 +5,12 @@
 }
 
 body {
-    background-color: gray;
+    background-color: rgb(247, 246, 251);
     height: 100%;
-}
-
-@font-face {
-    font-family: myFont;
-    src: url("../Font/Roboto-Regular.ttf");
 }
 
 .container {
     position: relative;
-    
-    background-color: rgb(247, 246, 251);
 
     margin: 0 auto;
 
@@ -28,17 +21,44 @@ body {
     flex-direction: column;
 }
 /*---------------------------------------------------------------*/
-
-.headerImage {
+.header {
     position: absolute;
-    
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+}
+
+.header .headerImage {
+    position: relative;
     background-image: url("../img/Header Desktop.svg");
     background-position: right;
     background-repeat: no-repeat;
     
-    width: 100%;
-    height: 400px;
+    width: 1440px;
+    height: 100%;
 }
+
+.imageLeft {
+    background-image: url("../img/imageLeft.jpg");
+    background-position: right;
+    background-size: 100% 100%;
+    width: 0px;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    
+}
+
+.imageRight {
+    background-image: url("../img/imageRight.jpg");
+    background-position: left;
+    background-size: 100% 100%;
+    width: 0px;
+    height: 100%;
+}
+
 /*---------------------------------------------------------------*/
 .firstSection, .secondSection, .thirdSection {
     position: relative;
@@ -72,7 +92,7 @@ body {
 }
 
 .firstSection .descriptionTitle {
-    font-family: myFont;
+    font-family: "roboto";
     font-style: normal;
 
     font-weight: 700;
@@ -85,7 +105,7 @@ body {
 }
 
 .firstSection .descriptionText {
-    font-family: myFont;
+    font-family: "roboto";
     font-style: normal;
     
     font-weight: 400;
@@ -104,7 +124,7 @@ body {
 }
 
 .firstSection .firstSectionContent .column_2 .space2 {
-    height: 350px;
+    height: 365px;
 }
 
 .firstSection .firstSectionContent .column_2 .description {
@@ -128,7 +148,7 @@ body {
 
     padding: 4px 33px ;
     
-    font-family: myFont;
+    font-family: "roboto";
     font-style: normal;
 
     font-weight: 500;
@@ -146,7 +166,7 @@ body {
 }
 
 .secondSection .title {
-    font-family: myFont;
+    font-family: "roboto";
     font-style: normal;
 
     font-weight: 700;
@@ -180,7 +200,7 @@ body {
 }
 
 .thirdSection .title .bigTitle{
-    font-family: myFont;
+    font-family: "roboto";
     font-style: normal;
 
     font-weight: 700;
@@ -194,7 +214,7 @@ body {
 }
 
 .thirdSection .title .smallTitle{
-    font-family: myFont;
+    font-family: "roboto";
     font-style: normal;
     
     font-weight: 400;
@@ -236,6 +256,7 @@ body {
 .thirdSection .cards .card .content {
     display: flex;
     flex-direction: column;
+
 }
 
 .thirdSection .cards .card .content img {
@@ -245,7 +266,7 @@ body {
 }
 
 .thirdSection .cards .card .cardText {
-    font-family: myFont;
+    font-family: "roboto";
     font-style: normal;
     
     font-weight: 400;
@@ -262,7 +283,7 @@ body {
 }
 
 .thirdSection .info  .cardName {
-    font-family: myFont;
+    font-family: "roboto";
     font-style: normal;
 
     font-weight: 600;
@@ -273,7 +294,7 @@ body {
 }
 
 .thirdSection .info  .cardPosition {
-    font-family: myFont;
+    font-family: "roboto";
     font-style: normal;
     
     font-weight: 400;
@@ -332,10 +353,12 @@ body {
 /*------------------------------------------------------------*/
 footer {
     height: 74px;
+    width: 100%;
     padding: 20px 65px;
     bottom: 0px;
 
     background: #284D6D;
+    min-width: 331px;
 }
 
 footer table {
@@ -347,7 +370,7 @@ footer .footerText {
 }
 
 footer .footerText {
-    font-family: myFont;
+    font-family: "roboto";
     font-style: normal;
 
     font-weight: 400;
@@ -364,9 +387,21 @@ footer .footerText {
         max-width: 991px;
     }
     /*-----------------------------------------------------------*/
-    .headerImage {
+    .header {
+        position: absolute;
+    }
+    .header .headerImage {
         background-image: url("../img/Header\ Desktop2.svg");
         background-position: center;
+        width: 991px;
+        height: 100%;
+    }
+    .imageLeft {
+        background-image: url("../img/imageLeft1.jpg");
+    }
+    
+    .imageRight {
+        background-image: url("../img/imageRight2.jpg");
     }
 
     .firstSection {
@@ -419,13 +454,28 @@ footer .footerText {
 @media (max-width: 600px ) {
     .container {
         max-width: 375px;
-        min-width: 331px;
+        min-width: 327px;
     }
 
-    .headerImage {
-        background-image: url("../img/Header\ Mobile.svg");
+    .header {
+        position: absolute;
         height: 181px;
+        min-width: 331px;
     }
+    .header .headerImage {
+        background-image: url("../img/Header\ Mobile.svg");
+        background-position: center;
+        width: 375px;
+        height: 100%;
+    }
+    .imageLeft {
+        background-image: url("../img/imageLeft1.jpg");
+    }
+    
+    .imageRight {
+        background-image: url("../img/imageRight2.jpg");
+    }
+
 
     .firstSection  {
         padding: 0px;
@@ -436,11 +486,11 @@ footer .footerText {
         width: 210px;
         height: auto;
         left: 35px;
-        top: 5px;
+        top: 15px;
     }
 
     .firstSection .descriptionTitle {
-        font-family: myFont;
+        font-family: "roboto";
         font-style: normal;
 
         font-weight: 700;
@@ -453,7 +503,7 @@ footer .footerText {
     }
 
     .firstSection .descriptionText {
-        font-family: myFont;
+        font-family: "roboto";
         font-style: normal;
 
         font-weight: 400;
@@ -491,10 +541,11 @@ footer .footerText {
 
     .secondSection {
         padding: 24px 0px;
+        min-width: 331px;
     }
     
     .secondSection .title {
-        font-family: myFont;
+        font-family: "roboto";
         font-style: normal;
 
         font-weight: 700;
@@ -526,7 +577,7 @@ footer .footerText {
     }
     
     .thirdSection .title .bigTitle{
-        font-family: myFont;
+        font-family: "roboto";
         font-style: normal;
 
         font-weight: 700;
@@ -539,7 +590,7 @@ footer .footerText {
     }
     
     .thirdSection .title .smallTitle{
-        font-family: myFont;
+        font-family: "roboto";
         font-style: normal;
 
         font-weight: 400;
@@ -547,6 +598,8 @@ footer .footerText {
         line-height: 23px;
 
         color: #284D6D;
+
+        margin-bottom: 20px;
     }
 
     footer {
@@ -567,7 +620,7 @@ footer .footerText {
     }
     
     footer .footerText {
-        font-family: myFont;
+        font-family: "roboto";
         font-style: normal;
 
         font-weight: 400;
@@ -589,7 +642,6 @@ footer .footerText {
 
     .thirdSection .cards {
         max-width: 850px;
-        background-color: transparent;
     }
     .thirdSection .cards .card {
         max-width: 400px;
@@ -603,9 +655,8 @@ footer .footerText {
 
 @media (max-width: 975px) {
     .thirdSection .cards {
-        max-width: 450px;
-        height: 410px;
-        background-color: rgb(247, 246, 251);
+        width: 450px;
+        height: 450px;
         position: relative;
         overflow: hidden;
     }
@@ -623,12 +674,13 @@ footer .footerText {
     
     .thirdSection .pageNav {
         display: block;
+        top: 400px;
     }
 }
 @media (max-width: 600px) {
     .thirdSection .cards {
-        max-width: 316px;
-        height: 410px;
+        max-width: 330px;
+        height: 450px;
         background-color: rgb(247, 246, 251);
         position: relative;
         overflow: hidden;
@@ -647,13 +699,14 @@ footer .footerText {
 
     .thirdSection .pageNav {
         display: block;
+        top: 400px;
     }
 }
 
 @keyframes autoplay2 {
     0% {left: 100%}
-    4% {left: 25px; box-shadow: 0px 10px 22px rgba(36, 74, 170, 0.15);}
-    33.33% {left: 25px}
+    4% {left: 20px; box-shadow: 0px 10px 22px rgba(36, 74, 170, 0.15);}
+    33.33% {left: 20px}
     37.33% {left: -120%}
     100% {left: -150%}
 }

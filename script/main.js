@@ -28,6 +28,43 @@ var changePageNav = setInterval(function() {
     }
 }, 1);
 
+var chnageCardMargin = setInterval(function() {
+    var cards = document.getElementsByClassName("cards");
+    var card = document.getElementsByClassName("card");
+
+    var cardNum = parseInt(cards[0].offsetWidth/card[0].offsetWidth);
+    var margin = (cards[0].offsetWidth - card[0].offsetWidth*cardNum)/(2*cardNum)-1.5;
+    if(cardNum>1) {
+        for(var i = 0; i < card.length; i++) {
+            card[i].style.marginLeft = margin + "px";
+            card[i].style.marginRight = margin + "px";
+        }    
+    }
+}, 1);
+
+var changeHeader = setInterval(function() {
+    var bodyWidth = document.body.clientWidth;
+    var container = document.getElementsByClassName("container");
+    var containerWdith = container[0].offsetWidth;
+
+    var width = (bodyWidth - containerWdith)/2;
+    var imageRight = document.getElementsByClassName("imageRight");
+    var imageLeft = document.getElementsByClassName("imageLeft");
+
+    if(bodyWidth > 331) {
+        imageRight[0].style.width = width + 'px';
+        imageLeft[0].style.width = width + 'px';
+    
+        if(bodyWidth == containerWdith) {
+            imageLeft[0].style.height = "0";
+            imageRight[0].style.height = "0";
+        } else{
+            imageLeft[0].style.height = "100%";
+            imageRight[0].style.height = "100%";
+        }
+    }
+}, 1);
+
 var moveStepImage = setInterval(function() {
     var elements  = document.getElementsByClassName("stepMovie");
     var stepValues  = document.getElementsByClassName("stepValue");

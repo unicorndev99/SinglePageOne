@@ -1,7 +1,3 @@
-@font-face {
-    font-family: myFont;
-    src: url("../Font/Roboto-Regular.ttf");
-}
 
 .stepButtons { 
 	position:relative;
@@ -66,7 +62,7 @@
 	width:100%;
 	height:10px;
 
-	font-family:myFont;
+	font-family:"roboto";
 	text-align:center;
 
 	font-size:14px;
@@ -111,7 +107,7 @@
 	
     color:#3F4045;
 	
-    font-family:myFont;
+    font-family:"roboto";
 	text-align:center;
 
 	font-size:18px;
@@ -185,7 +181,7 @@
     }
 
     .stepButtonTitle {
-        font-family: myFont;
+        font-family: "roboto";
         font-style: normal;
 
         font-weight: 400;
