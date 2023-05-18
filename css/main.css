@@ -21,48 +21,16 @@ body {
     flex-direction: column;
 }
 /*---------------------------------------------------------------*/
-.header {
+.headerImage {
     position: absolute;
-    width: 100%;
+
     height: 400px;
-    display: flex;
-    align-items: center;
-}
+    width: 100%;
 
-.header .headerImage {
-    position: relative;
-    background-image: url("../img/Header Desktop.svg");
-    background-position: right top;
+    background-image: url("../img/Header\ Desktop.svg");
     background-repeat: no-repeat;
-    
-    width: 1440px;
-    height: 100%;
-}
-
-.imageLeft {
-    background-image: url("../img/imageLeft.jpg");
-    background-position: right top;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    width: 0px;
-    height: 100%;
-    margin: 0px;
-    padding: 0px;
-    border: none;
-    right: -1px;
-    position: relative;
-    
-}
-
-.imageRight {
-    background-image: url("../img/imageRight.jpg");
-    background-position: left top;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    width: 0px;
-    height: 100%;
-    left: -1px;
-    position: relative;
+    background-size: cover;
+    background-position: center top;
 }
 
 /*---------------------------------------------------------------*/
@@ -204,7 +172,6 @@ body {
 
 .secondSection .scrollImageContainer img {
     margin: 0 50px;
-    display: none;
 }
 /*----------------------------------------------------------------*/
 .thirdSection {
@@ -411,21 +378,10 @@ footer .footerText {
         max-width: 991px;
     }
     /*-----------------------------------------------------------*/
-    .header {
-        position: absolute;
-    }
-    .header .headerImage {
+    .headerImage {
         background-image: url("../img/Header\ Desktop2.svg");
-        background-position: center top;
-        width: 991px;
-        height: 100%;
-    }
-    .imageLeft {
-        background-image: url("../img/imageLeft1.jpg");
-    }
-    
-    .imageRight {
-        background-image: url("../img/imageRight2.jpg");
+        background-position: center;
+        width: 100%;
     }
 
     .firstSection {
@@ -475,31 +431,59 @@ footer .footerText {
     }
 }
 
-@media (max-width: 600px ) {
+@media (max-width: 1430px) {
+
+    .thirdSection .cards {
+        width: 850px;
+        background-color: transparent;
+    }
+    .thirdSection .cards .card {
+        max-width: 400px;
+        height: 388px;
+
+        margin: 0px 10px;
+        margin-bottom: 20px;
+        display: inline-block;
+    }
+}
+
+@media (max-width: 975px) {
+    .thirdSection .cards {
+        width: 480px;
+        height: 460px;
+        background-color: rgb(247, 246, 251);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .thirdSection .cards .card {
+        width: 400px;
+        height: 388px;
+        position: absolute; 
+        top: 0;
+        left: 100%;
+        margin: 0px;
+        animation: 12s autoplay2 infinite ease-in-out;
+        box-shadow: none;    
+        margin-left: 35px;    
+    }
+    
+    .thirdSection .pageNav {
+        display: block;
+        top: 410px;
+    }
+}
+@media (max-width: 600px) {
     .container {
         max-width: 375px;
         min-width: 327px;
     }
 
-    .header {
-        position: absolute;
-        height: 181px;
-        min-width: 331px;
-    }
-    .header .headerImage {
+    .headerImage {
         background-image: url("../img/Header\ Mobile.svg");
-        background-position: center top;
-        width: 375px;
-        height: 100%;
+        height: 181px;
+        min-width: 327px;
     }
-    .imageLeft {
-        background-image: url("../img/imageLeft1.jpg");
-    }
-    
-    .imageRight {
-        background-image: url("../img/imageRight2.jpg");
-    }
-
 
     .firstSection  {
         padding: 0px;
@@ -660,86 +644,32 @@ footer .footerText {
         height: 40px;
         margin-bottom: 12px;
     }
-}
-
-@media (max-width: 1430px) {
 
     .thirdSection .cards {
-        max-width: 850px;
-    }
-    .thirdSection .cards .card {
-        max-width: 400px;
-        height: 388px;
-
-        margin: 0px 10px;
-        margin-bottom: 20px;
-        display: inline-block;
-    }
-}
-
-@media (max-width: 975px) {
-    .thirdSection .cards {
-        width: 450px;
-        height: 450px;
-        position: relative;
-        overflow: hidden;
-    }
-
-    .thirdSection .cards .card {
-        width: 400px;
-        height: 388px;
-        position: absolute; 
-        top: 0;
-        left: 100%;
-        margin: 0px;
-        animation: 12s autoplay2 infinite ease-in-out;
-        box-shadow: none;        
-    }
-    
-    .thirdSection .pageNav {
-        display: block;
-        top: 400px;
-    }
-}
-@media (max-width: 600px) {
-    .thirdSection .cards {
-        max-width: 331px;
-        height: 450px;
+        width: 100%;
+        height: 460px;
         background-color: rgb(247, 246, 251);
         position: relative;
         overflow: hidden;
-
+        margin: 0px;
     }
 
     .thirdSection .cards .card {
-        width: 316px;
-        height: 368px;
-        position: absolute; 
-        top: 0;
-        left: 100%;
+        width: 87%;
+        height: 388px;
         margin: 0px;
-        animation: 12s autoplay2 infinite ease-in-out;
-        box-shadow: none;        
     }
 
     .thirdSection .pageNav {
         display: block;
         top: 400px;
-    }
-
-    .imageLeft {
-        background-image: url("../img/imageLeft2.jpg");
-    }
-    
-    .imageRight {
-        background-image: url("../img/imageRight3.jpg");
     }
 }
 
 @keyframes autoplay2 {
     0% {left: 100%}
-    4% {left: 7px; box-shadow: 0px 10px 22px rgba(36, 74, 170, 0.15);}
-    33.33% {left: 7px}
+    4% {left: 5%; box-shadow: 0px 10px 22px rgba(36, 74, 170, 0.15);}
+    33.33% {left: 5%}
     37.33% {left: -120%}
     100% {left: -150%}
 }
